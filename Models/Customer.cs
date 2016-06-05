@@ -33,7 +33,7 @@ namespace armstrongkarate_.Models
         [Display(Name = "Your firstname")]
         [StringLength(50, ErrorMessage = "First name cannot be longer than 50 characters.")]
         public string FName { get; set; }
-
+         
 
   
         [DataType(DataType.Date)]
