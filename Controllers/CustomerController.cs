@@ -81,7 +81,7 @@ namespace armstrongkarate_.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "CustomerID,Tle,SName,FName,EnrollmentDate ")] Customer customer)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) 
             {
                 db.Entry(customer).State = EntityState.Modified;
                 db.SaveChanges();
