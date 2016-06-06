@@ -47,7 +47,7 @@ namespace armstrongkarate_.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductID,pName,Descrition,Quantity,price")] product product)
+        public ActionResult Create([Bind(Include = "ProductID,pName,Descrition,Quantity,price,Enrollment Date")] product product)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace armstrongkarate_.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProductID,pName,Descrition,Quantity,price")] product product)
+        public ActionResult Edit([Bind(Include = "ProductID,pName,Descrition,Quantity,price,Enrollment Date")] product product)
         {
             if (ModelState.IsValid)
             {
