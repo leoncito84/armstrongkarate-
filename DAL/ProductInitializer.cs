@@ -8,6 +8,8 @@ namespace armstrongkarate_.DAL
 {
     public class ProductInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<ProductContext>
     {
+        public object EnrollmentDate { get; private set; }
+
         protected override void Seed(ProductContext context)
         {
             var product = new List<product>
@@ -29,15 +31,15 @@ namespace armstrongkarate_.DAL
 
             var Customer = new List<Customer>
             {
-                new Customer {SName="Hung",FName="Micahel"},
-                new Customer {SName="James",FName="Pearline"},
-                new Customer {SName="McKeniz",FName="Charlotte"},
-                new Customer {SName="Tyler",FName="Ko"},
-                new Customer {SName="Williams",FName="John"},
-                new Customer {SName="Pongo",FName="David"},
-                new Customer {SName="Cheung",FName="Kitty"},
-                new Customer {SName="Dobblins",FName="Laura"},
-                new Customer {SName="Percel",FName="Ewa"},
+                new Customer {Tle="Mr",SName="Hung",FName="Micahel",EnrollmentDate=DateTime.Parse("2016-01-6")},
+                new Customer {Tle="Mr",SName="James",FName="Pearline",EnrollmentDate=DateTime.Parse("2016-01-10")},
+                new Customer {Tle="Miss",SName="McKeniz",FName="Charlotte",EnrollmentDate=DateTime.Parse("2016-02-18")},
+                new Customer {Tle="Mr",SName="Tyler",FName="Ko",EnrollmentDate=DateTime.Parse("2016-02-20")},
+                new Customer {Tle="Mr",SName="Williams",FName="John",EnrollmentDate=DateTime.Parse("2016-03-2")},
+                new Customer {Tle="Mr",SName="Pongo",FName="David",EnrollmentDate=DateTime.Parse("2016-03-11")},
+                new Customer {Tle="Mrs",SName="Cheung",FName="Kitty",EnrollmentDate=DateTime.Parse("2016-04-3")},
+                new Customer {Tle="Mrs",SName="Dobblins",FName="Laura",EnrollmentDate = DateTime.Parse("2016-05-4") },
+                new Customer {Tle="Miss",SName="Percel",FName="Ewa",EnrollmentDate=DateTime.Parse("2016-05-30")},
 
             };
             Customer.ForEach(s => context.Customers.Add(s));
