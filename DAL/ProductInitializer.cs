@@ -27,7 +27,7 @@ namespace armstrongkarate_.DAL
             };
 
             product.ForEach(s => context.Products.Add(s));
-            context.SaveChanges();  
+            context.SaveChanges();   
 
             var Customer = new List<Customer>
             {
